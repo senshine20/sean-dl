@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Video Downloader</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #3b5998;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Container */
+        #download-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #3b5998;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #334d84;
+        }
+
+        /* Download link */
+        #download-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #download-link a {
+            color: #3b5998;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #download-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Additional styling for download message */
+        #download-message {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Styling for the menu */
+        .list-menu {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            list-style: none;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .list-menu li {
+            margin: 0 15px;
+        }
+
+        .list-menu a {
+            text-decoration: none;
+            color: #3b5998;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .list-menu a:hover, .list-menu a.active {
+            background-color: #3b5998;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu navigasi -->
+    <ul class="list-menu">
+        <li><a class="active" href="fb.html">Facebook</a></li>
+        <li><a href="ig.html">Instagram</a></li>
+        <li><a href="tt.html">Tiktok</a></li>
+    </ul>
+
+    <h1>Facebook Video Downloader</h1>
+    
+    <!-- Form untuk download -->
+    <form id="download-form">
+        <input type="text" id="facebook-url" placeholder="Masukkan URL Video Facebook" required>
+        <button type="submit">Unduh Video</button>
+    </form>
+
+    <!-- Tempat untuk menampilkan link download -->
+    <div id="download-link"></div>
+    <div id="download-message"></div> <!-- Pesan untuk link download -->
+
+    <!-- Menyertakan file JavaScript -->
+    <script type="module" src="javascript/fb-dl.js"></script>
+</body>
+</html>
